@@ -16,5 +16,23 @@ namespace Projeto
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string email = txtUsuario.Text;
+            string senha = txtSenha.Text;
+            if(email.Equals("admin") & senha.Equals("74108520"))
+            {
+                MessageBox.Show("Login bem sucedido", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            } else
+            {
+                MessageBox.Show("Usuário ou senha incorretos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
