@@ -28,48 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.tbUsuario = new System.Windows.Forms.TextBox();
+            this.tbSenha = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.btnSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txtUsuario
+            // tbUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(331, 165);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(115, 20);
-            this.txtUsuario.TabIndex = 0;
-            this.txtUsuario.Text = "Usuário";
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            this.tbUsuario.Location = new System.Drawing.Point(338, 174);
+            this.tbUsuario.Name = "tbUsuario";
+            this.tbUsuario.Size = new System.Drawing.Size(100, 20);
+            this.tbUsuario.TabIndex = 0;
+            this.tbUsuario.TextChanged += new System.EventHandler(this.tbUsuario_TextChanged);
+            // 
+            // tbSenha
+            // 
+            this.tbSenha.Location = new System.Drawing.Point(338, 200);
+            this.tbSenha.Name = "tbSenha";
+            this.tbSenha.Size = new System.Drawing.Size(100, 20);
+            this.tbSenha.TabIndex = 1;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(349, 217);
+            this.btnLogin.Location = new System.Drawing.Point(349, 226);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 1;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Entrar";
             this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtSenha
+            // btnSair
             // 
-            this.txtSenha.Location = new System.Drawing.Point(331, 191);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(115, 20);
-            this.txtSenha.TabIndex = 2;
-            this.txtSenha.Text = "Senha";
+            this.btnSair.Location = new System.Drawing.Point(349, 255);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 23);
+            this.btnSair.TabIndex = 3;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.tbSenha);
+            this.Controls.Add(this.tbUsuario);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -77,9 +88,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox tbUsuario;
+        private System.Windows.Forms.TextBox tbSenha;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.Button btnSair;
     }
 }
 

@@ -17,22 +17,35 @@ namespace Projeto
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            string email = txtUsuario.Text;
-            string senha = txtSenha.Text;
-            if(email.Equals("admin") & senha.Equals("74108520"))
+            tbSenha.PasswordChar = '*';
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string email = tbUsuario.Text;
+            string senha = tbSenha.Text;
+
+            if (email.Equals("admin") & senha.Equals("admin"))
             {
                 MessageBox.Show("Login bem sucedido", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            } else
+            }
+            else
             {
                 MessageBox.Show("Usuário ou senha incorretos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        private void tbUsuario_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Fechando o sistema!", "Sair", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Environment.Exit(0);
         }
     }
 }
